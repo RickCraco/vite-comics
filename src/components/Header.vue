@@ -1,9 +1,9 @@
 <template>
     <header>
-        <div class="container">
+        <div class="container d-flex align-items-center justify-content-between py-3">
             <img src="../../public/img/dc-logo.png" alt="logo">
-            <ul>
-                <li></li>
+            <ul class="d-flex nav">
+                <li class="px-3 nav-item" v-for="item in menu">{{ item }}</li>
             </ul>
         </div>
     </header>
@@ -21,5 +21,4 @@
 </script>
 
 <style lang="scss" scoped>
-
 </style>
