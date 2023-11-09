@@ -3,7 +3,7 @@
         <div class="container d-flex align-items-center justify-content-between py-3">
             <img src="../../public/img/dc-logo.png" alt="logo">
             <ul class="d-flex nav">
-                <li class="px-3 nav-item" v-for="item in menu">{{ item.text }}</li>
+                <li class="px-3 nav-item" v-for="item in menu" @click="cambiaMenuIndex(item.id)">{{ item.text }}</li>
             </ul>
         </div>
     </header>
@@ -14,6 +14,7 @@
         name : 'Header',
         data(){
             return {
+                activeIndex : 2,
                 menu : [
                     {
                         text: 'CHARACTERS',
@@ -56,6 +57,20 @@
                         id: 10
                     },
                 ]
+            }
+        },
+        methods:{
+            changeMenuIndex(id){
+                for(let i = 0; i < this.menu.length; i++){
+                    if(this.menu[i].id == id){
+                        this.activeIndex = i;
+                    }
+                }
+            },
+            addHover(id){
+                if(this.menu[this.activeIndex].id == id){
+                    return 'active';
+                }
             }
         }
     }
