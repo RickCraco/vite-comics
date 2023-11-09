@@ -14,7 +14,7 @@
         name : 'Header',
         data(){
             return {
-                activeIndex : 2,
+                activeIndex : 1,
                 menu : [
                     {
                         text: 'CHARACTERS',
@@ -79,5 +79,6 @@
 <style lang="scss" scoped>
 .my-active{
     border-bottom: 2px solid rgb(29, 123, 247);
+    color: rgb(29, 123, 247);
 }
 </style>
