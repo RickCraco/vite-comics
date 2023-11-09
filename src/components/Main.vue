@@ -6,12 +6,12 @@
     </div>
     <div class="my-bg">
         <div class="container">
-            <ul class="d-flex nav align-items-center justify-content-center">
-                <li class="px-3 nav-item" v-for="item in menu">
-                    <img :src="item.img" alt="">
-                    {{ item.text }}
-                </li>
-            </ul>
+            <div class="d-flex nav align-items-center justify-content-center">
+                <div class="px-3 nav-item d-flex align-items-center py-4" v-for="item in menu">
+                    <div><img :src="item.img" alt=""></div>
+                    <span class="px-2 text-white">{{ item.text }}</span>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -58,6 +58,7 @@
 }
 
 img{
-    width: 25%;
+    width: 50px;
+    height: 65px;
 }
 </style>
