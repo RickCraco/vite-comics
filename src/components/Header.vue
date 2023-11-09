@@ -3,7 +3,7 @@
         <div class="container d-flex align-items-center justify-content-between py-3">
             <img src="../../public/img/dc-logo.png" alt="logo">
             <ul class="d-flex nav">
-                <li class="px-3 nav-item" v-for="item in menu" @click="cambiaMenuIndex(item.id)">{{ item.text }}</li>
+                <li class="px-3 nav-item" v-for="item in menu" @click="changeMenuIndex(item.id)">{{ item.text }}</li>
             </ul>
         </div>
     </header>
