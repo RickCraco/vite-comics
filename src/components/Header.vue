@@ -3,7 +3,7 @@
         <div class="container d-flex align-items-center justify-content-between py-3">
             <img src="../../public/img/dc-logo.png" alt="logo">
             <ul class="d-flex nav">
-                <li class="px-3 nav-item" v-for="item in menu" @click="changeMenuIndex(item.id)">{{ item.text }}</li>
+                <li class="px-3 nav-item" v-for="item in menu" @click="changeMenuIndex(item.id), addHover(item.id)" :class="addHover(item.id)">{{ item.text }}</li>
             </ul>
         </div>
     </header>
@@ -69,7 +69,7 @@
             },
             addHover(id){
                 if(this.menu[this.activeIndex].id == id){
-                    return 'active';
+                    return 'my-active';
                 }
             }
         }
@@ -77,4 +77,7 @@
 </script>
 
 <style lang="scss" scoped>
+.my-active{
+    border-bottom: 2px solid rgb(29, 123, 247);
+}
 </style>
