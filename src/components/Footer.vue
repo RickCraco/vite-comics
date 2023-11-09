@@ -95,6 +95,7 @@
     img{
         position: absolute;
         top: -25%;
-        right: 0;
+        right: -15%;
+        width: 100%;
     }
 </style>
