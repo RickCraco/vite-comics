@@ -1,8 +1,8 @@
 <template>
-    <div class="card">
-        <img :src="thumbs" :alt="title" class="card-img-top">
-        <div class="card-body">
-            <h5 class="card-title">{{ title }}</h5>
+    <div class="col-2">
+        <img :src="thumbs" :alt="title" class="card-img-top ">
+        <div>
+            <h5>{{ title }}</h5>
         </div>
     </div>
 </template>
@@ -15,5 +15,11 @@
 </script>
 
 <style lang="scss" scoped>
-
+    img{
+        width: 200px;
+        height: 200px;
+    }
+    h5{
+        font-size: 15px;
+    }
 </style>
