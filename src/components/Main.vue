@@ -19,10 +19,12 @@
 </template>
 
 <script lang="ts">
+import axios from 'axios';
 export default {
     name: 'Main',
     data() {
         return {
+            comics:[],
             menu: [
                 {
                     text: 'DIGITAL COMICS',
@@ -46,6 +48,11 @@ export default {
                 },
             ]
         }
+    },
+    mounted(){
+        axios.get('dc-comics.json').then(el =>{
+            this.comics = el.data;
+        })
     }
 }
 </script>
