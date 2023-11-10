@@ -1,9 +1,9 @@
 <template>
     <nav>
         <div class="py-4 text-white boack">
-            <div class="container">
-                <h1>--&gt;Content goes here &lt;--</h1>
-            </div>
+            <section class="w-100 sezione-top position-relative">
+                <h3 class="bg-primary text-white text-uppercase p-3">Current series</h3>
+            </section>
         </div>
         <div class="my-bg" id="div-blu ">
             <div class="container">
@@ -67,5 +67,18 @@ img {
 nav {
     position: relative;
     z-index: 1000;
+}
+
+.sezione-top {
+    height: 40vh;
+    background-image: url('img/jumbotron.jpg');
+    background-size: 100%;
+}
+
+h3{
+    position: absolute;
+    bottom: -10%;
+    left: 22%;
+    z-index: 5000;
 }
 </style>
