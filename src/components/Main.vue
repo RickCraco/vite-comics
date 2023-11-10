@@ -5,7 +5,11 @@
                 <h3 class="bg-primary text-white text-uppercase p-3">Current series</h3>
             </section>
             <section>
-                <Card v-for="item in comics" :thumbs="item.thumb" :title="item.series"/>
+                <div class="container py-5">
+                    <div class="row">
+                        <Card v-for="item in comics" :thumbs="item.thumb" :title="item.series"/>
+                    </div>
+                </div>
             </section>
         </div>
         <div class="my-bg" id="div-blu ">
