@@ -25,7 +25,7 @@
     </nav>
 </template>
 
-<script lang="ts">
+<script>
 import axios from 'axios';
 import Card from './Card.vue';
 
