@@ -4,6 +4,9 @@
             <section class="w-100 sezione-top position-relative">
                 <h3 class="bg-primary text-white text-uppercase p-3">Current series</h3>
             </section>
+            <section>
+                <Card v-for="item in comics" :thumbs="item.thumb" :title="item.series"/>
+            </section>
         </div>
         <div class="my-bg" id="div-blu ">
             <div class="container">
@@ -20,8 +23,13 @@
 
 <script lang="ts">
 import axios from 'axios';
+import Card from './Card.vue';
+
 export default {
     name: 'Main',
+    components: {
+        Card,
+    },
     data() {
         return {
             comics:[],
